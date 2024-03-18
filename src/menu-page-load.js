@@ -44,7 +44,7 @@ const createMenuItem = (item) => {
     itemDescription.classList.add('item-description');
 
     itemName.innerHTML = `${item.name}`;
-    itemPrice.innerHTML = `${item.price}`;
+    itemPrice.innerHTML = `$${item.price}`;
     itemDescription.innerHTML = `${item.description}`;
 
     itemContainer.appendChild(itemName);
@@ -63,7 +63,8 @@ export default function menu(container) {
 
     const foodHeader = document.createElement('div');
     foodHeader.classList.add('header');
-    foodHeader.classList.add('food-header');
+    foodHeader.classList.add('items-header');
+    foodHeader.setAttribute('id', 'food-header');
     foodHeader.innerHTML = 'Food';
     container.appendChild(foodHeader);
 
@@ -103,7 +104,8 @@ export default function menu(container) {
 
     const beveragesHeader = document.createElement('div');
     beveragesHeader.classList.add('header');
-    beveragesHeader.classList.add('beverages-header');
+    beveragesHeader.classList.add('items-header');
+    beveragesHeader.setAttribute('id', 'beverages-header');
     beveragesHeader.innerHTML = 'Beverages';
     container.appendChild(beveragesHeader);
 

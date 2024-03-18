@@ -14,6 +14,7 @@ header {
     align-items: center;
 }
 
+/* Initial page */
 .main-page-img {
     height: 22rem;
     width: 20rem;
@@ -28,4 +29,35 @@ header {
 
 .about {
     margin: 0 10rem;
+}
+
+/* Menu */
+.menu-header {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.food-header {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.items-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+.beverages-header {
+    margin-bottom: 1rem;
 }
