@@ -1,7 +1,6 @@
 import Restaurant from './restaurant.jpg';
 
-export default function initial() {
-    const contentContainer = document.querySelector('#content');
+export default function initial(container) {
     const img = new Image();
     const headline = document.createElement('p');
     const about = document.createElement('p');
@@ -11,9 +10,9 @@ export default function initial() {
     headline.innerHTML = "Our Restaurant";
     about.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia minus, deleniti dolorem officia ex sequi expedita commodi architecto distinctio, quisquam perspiciatis voluptates dolor officiis temporibus doloremque hic cupiditate molestias reiciendis.";
 
-    contentContainer.appendChild(img);
-    contentContainer.appendChild(headline);
-    contentContainer.appendChild(about);
+    Container.appendChild(img);
+    Container.appendChild(headline);
+    Container.appendChild(about);
 
     img.classList.add('main-page-img');
     headline.classList.add('headline');
