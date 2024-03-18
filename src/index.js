@@ -1,5 +1,6 @@
 import './style.css';
 import initial from './initial-page-load';
+import menu from './menu-page-load';
 
 const homeBtn = document.querySelector('#home-btn');
 const menuBtn = document.querySelector('#menu-btn');
@@ -16,3 +17,7 @@ homeBtn.addEventListener('click', () => {
     initial(contentContainer)
 });
 
+menuBtn.addEventListener('click', () => {
+    clearContainer();
+    menu(contentContainer);
+})
