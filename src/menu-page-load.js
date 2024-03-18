@@ -7,7 +7,7 @@ class menuItem {
     }
 
     get name() {
-        return _name;
+        return this._name;
     }
 
     set name(name) {
@@ -15,7 +15,7 @@ class menuItem {
     }
 
     get price() {
-        return _price;
+        return this._price;
     }
 
     set price(price) {
@@ -23,7 +23,7 @@ class menuItem {
     }
 
     get description() {
-        return _description;
+        return this._description;
     }
 
     set description(description) {
@@ -31,7 +31,7 @@ class menuItem {
     }
 }
 
-const createMenuItemElement = (item) => {
+const createMenuItem = (item) => {
     const itemContainer = document.createElement('div');
     itemContainer.classList.add('item-container');
 
@@ -43,9 +43,9 @@ const createMenuItemElement = (item) => {
     itemPrice.classList.add('item-price');
     itemDescription.classList.add('item-description');
 
-    itemName.innerHTML = `${item.name()}`;
-    itemPrice.innerHTML = `${item.price()}`;
-    itemDescription.innerHTML = `${item.description()}`;
+    itemName.innerHTML = `${item.name}`;
+    itemPrice.innerHTML = `${item.price}`;
+    itemDescription.innerHTML = `${item.description}`;
 
     itemContainer.appendChild(itemName);
     itemContainer.appendChild(itemPrice);
@@ -56,20 +56,22 @@ const createMenuItemElement = (item) => {
 
 export default function menu(container) {
     const header = document.createElement('div');
-    header.classList.add('header menu-header');
+    header.classList.add('header');
+    header.classList.add('menu-header');
     header.innerHTML = 'Menu';
     container.appendChild(header);
 
     const foodHeader = document.createElement('div');
-    foodHeader.classList.add('header food-header');
+    foodHeader.classList.add('header');
+    foodHeader.classList.add('food-header');
     foodHeader.innerHTML = 'Food';
     container.appendChild(foodHeader);
 
     const foodItemsContainer = document.createElement('div');
     foodItemsContainer.classList.add('item-container');
-    container.appendChild(fooodItemsContainer);
+    container.appendChild(foodItemsContainer);
 
-    const burger = createMenuItemElement(
+    const burger = createMenuItem(
         new menuItem(
             'Burger',
             5,
@@ -77,7 +79,7 @@ export default function menu(container) {
             'Our delicious 100% grass fed patty inbetween two homemade buns'
         )
     );
-    const burrito = createMenuItemElement(
+    const burrito = createMenuItem(
         new menuItem(
             'California Burrito',
             10,
@@ -85,7 +87,7 @@ export default function menu(container) {
             'A homemade flor tortilla stuffed with freshly butchered skirt steak, hand-cut fries, guacamole and sour cream.'
         )
     );
-    const ribeye = createMenuItemElement(
+    const ribeye = createMenuItem(
         new menuItem(
             'Bone-in ribeye',
             18,
