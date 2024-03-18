@@ -68,7 +68,8 @@ export default function menu(container) {
     container.appendChild(foodHeader);
 
     const foodItemsContainer = document.createElement('div');
-    foodItemsContainer.classList.add('item-container');
+    foodItemsContainer.classList.add('items-container');
+    foodItemsContainer.classList.add('food-items-container');
     container.appendChild(foodItemsContainer);
 
     const burger = createMenuItem(
@@ -76,7 +77,7 @@ export default function menu(container) {
             'Burger',
             5,
             'food',
-            'Our delicious 100% grass fed patty inbetween two homemade buns'
+            'Our delicious 100% grass fed patty inbetween two homemade buns.'
         )
     );
     const burrito = createMenuItem(
@@ -92,11 +93,30 @@ export default function menu(container) {
             'Bone-in ribeye',
             18,
             'food',
-            'Butchered in house marbled bone-in ribeye'
+            'Butchered in house marbled bone-in ribeye.'
         )
     );
 
     foodItemsContainer.appendChild(burger);
     foodItemsContainer.appendChild(burrito);
     foodItemsContainer.appendChild(ribeye);
+
+    const beveragesHeader = document.createElement('div');
+    beveragesHeader.classList.add('header');
+    beveragesHeader.classList.add('beverages-header');
+    beveragesHeader.innerHTML = 'Beverages';
+    container.appendChild(beveragesHeader);
+
+    const beverageItemsContainer = document.createElement('div');
+    beverageItemsContainer.classList.add('items-container');
+    beverageItemsContainer.classList.add('beverage-items-container');
+    container.appendChild(beverageItemsContainer);
+
+    const soda = createMenuItem(new menuItem('Soda', 3, 'beverage', 'Choose from over 50 sodas!'));
+    const water = createMenuItem(new menuItem('Water', 2.50, 'Beverage', 'The best water in town.'));
+    const gatorade = createMenuItem(new menuItem('Gatorade', 3.50, 'Beverage', 'Every flavor of gatorade.'));
+
+    beverageItemsContainer.appendChild(soda);
+    beverageItemsContainer.appendChild(water);
+    beverageItemsContainer.appendChild(gatorade);
 }
