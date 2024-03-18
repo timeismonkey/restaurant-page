@@ -10,14 +10,14 @@ const contentContainer = document.querySelector('#content');
 // Load initial page content
 initial(contentContainer);
 
-const clearContainer = () => contentContainer.innerHTML = '';
+const clearContainer = () => (contentContainer.innerHTML = '');
 
 homeBtn.addEventListener('click', () => {
     clearContainer();
-    initial(contentContainer)
+    initial(contentContainer);
 });
 
 menuBtn.addEventListener('click', () => {
     clearContainer();
     menu(contentContainer);
-})
+});
