@@ -27,20 +27,31 @@ export default function contact(container) {
     socialMedia.classList.add('social-media-cont');
     contactContainer.appendChild(socialMedia);
     
+    const instagramAnchor = document.createElement('a');
+    instagramAnchor.classList.add('icon-container');
     const instagramIcon = new Image();
     instagramIcon.src = instagram;
     instagramIcon.classList.add('icon');
     instagramIcon.setAttribute('id', 'instgram-icon');
+    instagramAnchor.appendChild(instagramIcon);
+
+    const facebookAnchor = document.createElement('a');
+    facebookAnchor.classList.add('icon-container')
     const facebookIcon = new Image();
     facebookIcon.src = facebook;
     facebookIcon.classList.add('icon');
-    facebookIcon.setAttribute('id', 'fb-icon')
+    facebookIcon.setAttribute('id', 'fb-icon');
+    facebookAnchor.appendChild(facebookIcon);
+
+    const youtubeAnchor = document.createElement('a');
+    youtubeAnchor.classList.add('icon-anchor');
     const youtubeIcon = new Image();
     youtubeIcon.src = youtube;
     youtubeIcon.classList.add('icon');
     youtubeIcon.setAttribute('id', 'youtube-icon');
+    youtubeAnchor.appendChild(youtubeIcon);
 
-    socialMedia.appendChild(instagramIcon);
-    socialMedia.appendChild(facebookIcon);
-    socialMedia.appendChild(youtubeIcon);
+    socialMedia.appendChild(instagramAnchor);
+    socialMedia.appendChild(facebookAnchor);
+    socialMedia.appendChild(youtubeAnchor);
 }
