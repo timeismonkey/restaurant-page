@@ -1,4 +1,4 @@
-import Restaurant from './restaurant.jpg';
+import Restaurant from './imgs/restaurant.jpg';
 
 export default function initial(container) {
     const img = new Image();

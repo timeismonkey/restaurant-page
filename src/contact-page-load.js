@@ -1,6 +1,6 @@
-import instagram from './instagram.png';
-import facebook from './facebook.png';
-import youtube from './youtube.png';
+import instagram from './imgs/instagram.png';
+import facebook from './imgs/facebook.png';
+import youtube from './imgs/youtube.png';
 
 export default function contact(container) {
     const header = document.createElement('div');
