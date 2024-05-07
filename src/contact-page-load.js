@@ -3,15 +3,21 @@ import facebook from './imgs/facebook.png';
 import youtube from './imgs/youtube.png';
 
 export default function contact(container) {
+    const contactPageContainer = document.createElement('div');
+    contactPageContainer.classList.add('contact-page-container');
+    container.appendChild(contactPageContainer);
+
     const header = document.createElement('div');
     header.classList.add('header');
     header.classList.add('contact-header');
     header.innerHTML = 'Contact Us';
-    container.appendChild(header);
+    // container.appendChild(header);
+    contactPageContainer.appendChild(header);
 
     const contactContainer = document.createElement('div');
     contactContainer.classList.add('contact-container');
-    container.appendChild(contactContainer);
+    // container.appendChild(contactContainer);
+    contactPageContainer.appendChild(contactContainer);
 
     const phoneNumber = document.createElement('p');
     phoneNumber.classList.add('phone-number');

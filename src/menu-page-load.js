@@ -63,7 +63,6 @@ export default function menu(container) {
     header.classList.add('header');
     header.classList.add('menu-header');
     header.innerHTML = 'Menu';
-    // container.appendChild(header);
     menuContainer.appendChild(header);
 
     const foodHeader = document.createElement('div');
@@ -71,13 +70,11 @@ export default function menu(container) {
     foodHeader.classList.add('items-header');
     foodHeader.setAttribute('id', 'food-header');
     foodHeader.innerHTML = 'Food';
-    // container.appendChild(foodHeader);
     menuContainer.appendChild(foodHeader);
 
     const foodItemsContainer = document.createElement('div');
     foodItemsContainer.classList.add('items-container');
     foodItemsContainer.classList.add('food-items-container');
-    // container.appendChild(foodItemsContainer);
     menuContainer.appendChild(foodItemsContainer);
 
     const burger = createMenuItem(
@@ -114,13 +111,11 @@ export default function menu(container) {
     beveragesHeader.classList.add('items-header');
     beveragesHeader.setAttribute('id', 'beverages-header');
     beveragesHeader.innerHTML = 'Beverages';
-    // container.appendChild(beveragesHeader);
     menuContainer.appendChild(beveragesHeader)
 
     const beverageItemsContainer = document.createElement('div');
     beverageItemsContainer.classList.add('items-container');
     beverageItemsContainer.classList.add('beverage-items-container');
-    // container.appendChild(beverageItemsContainer);
     menuContainer.appendChild(beverageItemsContainer);
 
     const soda = createMenuItem(new menuItem('Soda', 3, 'beverage', 'Choose from over 50 sodas!'));
