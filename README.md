@@ -2,7 +2,7 @@
 
 Restaurant page is a single page application that makes use of NPM and Webpack to create an application that is broken into multiple modules.
 
-### <a href="">LIVE VERSION</a>
+### <a href="https://timeismonkey.github.io/restaurant-page/">LIVE VERSION</a>
 
 ### Initial Page
 
