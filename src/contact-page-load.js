@@ -11,12 +11,10 @@ export default function contact(container) {
     header.classList.add('header');
     header.classList.add('contact-header');
     header.innerHTML = 'Contact Us';
-    // container.appendChild(header);
     contactPageContainer.appendChild(header);
 
     const contactContainer = document.createElement('div');
     contactContainer.classList.add('contact-container');
-    // container.appendChild(contactContainer);
     contactPageContainer.appendChild(contactContainer);
 
     const phoneNumber = document.createElement('p');
